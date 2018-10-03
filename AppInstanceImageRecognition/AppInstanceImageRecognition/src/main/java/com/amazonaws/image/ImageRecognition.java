@@ -68,9 +68,7 @@ public class ImageRecognition {
 
 
 
-		BasicAWSCredentials awsCreds = new BasicAWSCredentials("AKIAJIIC4G4MGKC5QOPA",
-
-				"S0xfOD1mIUfZJezq3b1U+SECdWI8lu+fuOLHIPhn");
+		BasicAWSCredentials awsCreds = new BasicAWSCredentials(credentials); //credentials found in key file
 
 
 
@@ -131,7 +129,7 @@ public class ImageRecognition {
 
 				.withCredentials(new AWSStaticCredentialsProvider(
 
-						new BasicAWSCredentials("AKIAJIIC4G4MGKC5QOPA", "S0xfOD1mIUfZJezq3b1U+SECdWI8lu+fuOLHIPhn")))
+						new BasicAWSCredentials(credentials.accesskey, credentials.secret_key)))
 
 				.build();
 
@@ -212,7 +210,7 @@ public class ImageRecognition {
 
 				.withCredentials(new AWSStaticCredentialsProvider(
 
-						new BasicAWSCredentials("AKIAJIIC4G4MGKC5QOPA", "S0xfOD1mIUfZJezq3b1U+SECdWI8lu+fuOLHIPhn")))
+						new BasicAWSCredentials(credentials.access_key, credentials.secret_key)))
 
 				.build();
 		String queueurl = sqs.getQueueUrl(RESPONSE_QUEUE_NAME).getQueueUrl();
@@ -235,7 +233,7 @@ public class ImageRecognition {
 
 				.withCredentials(new AWSStaticCredentialsProvider(
 
-						new BasicAWSCredentials("AKIAJIIC4G4MGKC5QOPA", "S0xfOD1mIUfZJezq3b1U+SECdWI8lu+fuOLHIPhn")))
+						new BasicAWSCredentials(credentials.access_key, credentials.secret_key)))
 
 				.build();
 
