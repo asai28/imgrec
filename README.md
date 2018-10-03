@@ -1,1 +1,2 @@
-# imgrec
+# Image Recognition Using AWS
+
